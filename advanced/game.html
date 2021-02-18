@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Gladiator's Fight</title>
+    <link rel="stylesheet" href="css/game.css">
+  </head>
+  <body>
+
+    <h1>Chose Your Champion & Weapon</h1>
+
+    <div>
+      <form>
+          <p>My Champion is...</p>
+          <div>
+            <input id="max" class="glad" type="radio" name="glad" value="maximus">
+            <label for="max">Maximus</label>
+          </div>
+          <div>
+            <input id="spar" class="glad" type="radio" name="glad" value="spartacus">
+            <label for="spar">Spartacus</label>
+          </div>
+          <div>
+            <input id="xrix" class="glad" type="radio" name="glad" value="xrixos">
+            <label for="xrix">Xrixos</label>
+          </div>
+
+          <p>...and his weapon is...</p>
+          <div>
+            <input id="trid" class="weap" type="radio" name="weap" value="trident">
+            <label for="trid">Trident</label>
+          </div>
+          <div>
+            <input id="spe" class="weap" type="radio" name="weap" value="spear">
+            <label for="spe">Spear</label>
+          </div>
+          <div>
+            <input id="club" class="weap" type="radio" name="weap" value="club">
+            <label for="club">Club</label>
+          </div>
+      </form>
+    </div>
+
+    <div class="footer">
+      <button id="chooseBtn">Choose</button>
+    </div>
+
+    <script type="module" src='js/game.js'></script>
+  </body>
+</html>

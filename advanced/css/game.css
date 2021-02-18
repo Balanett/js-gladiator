@@ -1,0 +1,33 @@
+body {
+    background-image: url(chose.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 60px;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 60px;
+    width: 100%;
+    text-align: center;
+}
+
+.footer button {
+    font-size: 40px;
+    width: 200px;
+}
+
+form {
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 70px;
+}
