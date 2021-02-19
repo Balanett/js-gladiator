@@ -1,0 +1,42 @@
+body {
+    background-image: url(fight.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    margin: 20px;
+}
+
+h1 {
+    font-size: 60px;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 60px;
+    width: 100%;
+    text-align: center;
+}
+
+.footer button {
+    font-size: 40px;
+    width: 200px;
+}
+
+#chosenGlad {
+    margin-top: 150px;
+    margin-left: 300px;
+    color: green;
+}
+
+#vs {
+    text-align: center;
+    margin-top: 140px;
+    width: 100%;
+}
+
+#opponentGlad {
+    margin-top: 110px;
+    margin-left: 900px;
+    color: red;
+}

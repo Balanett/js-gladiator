@@ -24,4 +24,6 @@ chooseBtn.addEventListener("click", event => {
     opponent.push(GladOptions[randomGlad], Weapons[randomWeap]);
 
     console.log(chosen, opponent)
+
+    window.location = "fight.html"
 })
