@@ -7,9 +7,9 @@ class Gladiator {
             this.name = name
             this.weapon = weapon
         } else {
-            throw "This is not a valid weapon!"
+            throw Error("This is not a valid weapon!")
         }
     }
 }
 
-export {Gladiator}
+export default Gladiator

@@ -1,5 +1,5 @@
-import {Gladiator} from "./gladiator.js";
-import {Arena} from "./arena.js";
+import Gladiator from "./gladiator.js";
+import Arena from "./arena.js";
 
 
 // Create gladiators: Can't use invalid weapon! --> THROW ERROR
@@ -25,7 +25,7 @@ arena.addGladiator(glad1)
 arena.addGladiator(glad2)
 // arena.addGladiator(glad3)
 
-console.log("ADD Gladiators --> "+arena.name+"'s gladiators: "+arena.gladiators)
+console.log("ADD Gladiators --> "+arena.name+"'s gladiators: "+arena.gladiators[0].name+" "+arena.gladiators[1].name)
 
 
 // Checking entertainment:
@@ -37,7 +37,7 @@ arena.checkEntertainment(gladList)
 // Fight:
 
 const resultOfFight = arena.fight(glad1, glad2)
-const winnerGlad = resultOfFight[0]
+const winnerGlad = resultOfFight[0]               // -- innentől áttenni az Arena részbe!
 const loserGlad = resultOfFight[1]
 console.log("FIGHT --> The winner is... "+winnerGlad+"!")
 if (resultOfFight[0] === "Nobody won") {
@@ -60,4 +60,3 @@ if (resultOfFight[0] === "Nobody won") {
         console.log("Life is not always fair.")
     }
 }
-

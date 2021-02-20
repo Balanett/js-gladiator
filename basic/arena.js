@@ -3,23 +3,29 @@ class Arena {
     gladiators
 
     constructor(name) {
-        this.name = name.charAt(0).toUpperCase() + name.slice(1)
+        this.name = name.charAt(0).toUpperCase() + name.slice(1) // -- Getter, Setter szerint átírni (tipp: privát)
         this.gladiators = []
     }
 
     addGladiator (gladName) {
-        if (this.gladiators.length < 2) {
-            this.gladiators.push(gladName.name)
+        if (this.gladiators.length < 2) {       // -- a "szabályszerű" számokat érdemes elmenteni static const változóként
+            this.gladiators.push(gladName)
         } else {
-            throw "Only 2 gladiators can be in the arena at the same time!"
+            throw Error("Only 2 gladiators can be in the arena at the same time!")
         }
     }
 
-    removeGladiator (glads, gladName) {
+   /* logDetails () {
+        console.log("ADD Gladiators --> "+arena.name+"'s gladiators: "+arena.gladiators[0].name+" "+arena.gladiators[1].name)
+    }
+
+    */
+
+    removeGladiator (glads, gladName) {                    // ne kívülről jöjjön a glads tömb!
         return glads.filter(glads => glads !== gladName)
     }
 
-    checkEntertainment (glads) {
+    checkEntertainment (glads) {                           // ne kívülről jöjjön a glads tömb!   és mivel a tömb nem csak a nevet tartalmazza, meg kell keresni benne a nevet is
         if (glads.includes("Maximus")) {
             console.log("CHECK Entertainment --> The audience is having fun, because Maxiumus is in the arena.")
         } else {
@@ -27,19 +33,24 @@ class Arena {
         }
     }
 
-    fight(glad1, glad2) {
+    fight(glad1, glad2) {                    // ne kívülről jöjjön az adat!
         let weapon1 = glad1.weapon
         let weapon2 = glad2.weapon
         let winner = ""
         let loser = ""
 
+
+        // privát medótusba kitenni, hogy "check if Maximus..." (42-48 sor)
+
         if (glad1.name === "Maximus") {
-            winner = glad1.name
+            winner = glad1.name             // a winner - loser változókba se csak a nevet rakjuk!
             loser = glad2.name }
 
         else if (glad2.name === "Maximus") {
             winner = glad2.name
             loser = glad1.name }
+
+        // privát medótusba kitenni, hogy "check if fegyver ..." (42-48 sor)
 
         else if (weapon1 === weapon2) {
             winner = "Nobody won"}
@@ -62,4 +73,4 @@ class Arena {
     }
 }
 
-export {Arena}
+export default Arena
